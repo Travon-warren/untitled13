@@ -1,0 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Cinzel:wght@600&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, WHITE, BLUE);
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: flex-start; /* align to top */
+    font-size: 110px;
+}
+
+.container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Title styling */
+.title {
+    font-size: 4rem;
+    color: #00f5d4;
+    text-shadow: 0 0 15px #6a00f4;
+    margin-bottom: 30px;
+}
+
+h1{
+    font-size: 15px;
+}
+:root {
+    --primary-color: #0f0f0f;
+    --accent-color: #5e00ff;
+    --text-color: #e0e0e0;
+    --highlight-color: #ff0055;
+    --font-family: 'Orbitron', sans-serif;
+    --shadow-glow: 0 0 10px var(--accent-color);
+}
+
+p1{
+    color: var(--primary-color);
+    font-size: 15px;
+}
+
+p2{
+    color: var(--primary-color);
+    font-size: 15px;
+}

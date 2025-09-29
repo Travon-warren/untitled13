@@ -1,0 +1,65 @@
+/* Type Soul Roblox Theme: Bleach-inspired, spiritual warfare aesthetic */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Cinzel:wght@600&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, WHITE, BLUE);
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: flex-start; /* align to top */
+    font-size: 50px;
+}
+
+.container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Title styling */
+.title {
+    font-size: 4rem;
+    color: #00f5d4;
+    text-shadow: 0 0 15px #6a00f4;
+    margin-bottom: 30px;
+}
+
+/* Image row styling */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Uniform image size and style */
+.image-row img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #6a00f4;
+    transition: transform 0.3s ease;
+}
+
+.image-row img:hover {
+    transform: scale(1.05);
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-item p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: white;
+    font-family: 'Cinzel', serif;
+}
+
+p5{
+    font-size: 10px;
+}
+
