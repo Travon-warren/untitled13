@@ -4,58 +4,67 @@
     <meta charset="UTF-8">
     <title>TYPE SOUL</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <style>
-        .bottom-left {
-            position: fixed;
-            bottom: 10px;
-            left: 10px;
-            text-align: center;
-        }
-
-        .bottom-left img {
-            width: 100px; /* Adjust size as needed */
-            height: auto;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .bottom-left a {
-            text-decoration: none;
-            color: #007BFF;
-            font-weight: bold;
-        }
-
-        .bottom-left a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
+
 <body>
+
 <div class="container">
-    <h1 class="title">TYPE SOUL</h1>
+    <h1 class="title frosty-glow">TYPE SOUL</h1>
+
     <div class="image-row">
-        <div class="image-item">
-            <a href="soul%20reaper.html"><img src="iii.jpg" alt="About"></a>
+        <div class="image-item fade-in">
+            <a href="soul reaper.html">
+                <img src="iii.jpg" alt="Soul Reaper" class="animated-pic soulreaper-pic">
+            </a>
             <p>soul reaper</p>
         </div>
-        <div class="image-item">
-            <a href="hollow.html"><img src="images.png" alt="Numbers"></a>
+
+        <div class="image-item fade-in">
+            <a href="hollow.html">
+                <img src="images.png" alt="Hollow" class="animated-pic hollow-pic">
+            </a>
             <p>hollow</p>
         </div>
-        <div class="image-item">
-            <a href="quincy.html"><img src="download.png" alt="Why"></a>
+
+        <div class="image-item fade-in">
+            <a href="quincy.html">
+                <img src="download.png" alt="Quincy" class="animated-pic quincy-pic">
+            </a>
             <p>quincy</p>
         </div>
     </div>
 </div>
 
-<!-- Bottom-left corner image and link -->
-<div class="bottom-left">
-    <a href="contact.html"><img src="download.jpg" alt="Contact">
-        <p5>dont know what type soul is? Click the question mark!</p5>
+<!-- Bottom-left corner -->
+<div class="bottom-left frost-box">
+    <a href="contact.html">
+        <img src="download.jpg" alt="Contact" class="frosty-icon">
+        <p class="hint-text">dont know what type soul is? Click the question mark!</p>
+    </a>
+
+    <a href="quincy.html">
+        <img src="download.png" alt="Quincy" class="animated-pic quincy-pic small-icon">
+    </a>
+
+    <a href="hollow.html">
+        <img src="images.png" alt="Hollow" class="animated-pic hollow-pic small-icon">
+    </a>
+
+    <a href="soul reaper.html">
+        <img src="iii.jpg" alt="Soul Reaper" class="animated-pic soulreaper-pic small-icon">
     </a>
 </div>
+
+<!-- Faction box OUTSIDE bottom-left -->
+<div class="faction-box">
+    <h2 class="faction-title">Choose Your Faction</h2>
+    <button id="spinButton" class="spin-btn">Choose Your Faction</button>
+    <div id="resultArea" class="result-area"></div>
+</div>
+
+<!-- Script MUST be at the bottom -->
+<script src="script.js"></script>
+
 </body>
 </html>
-
 

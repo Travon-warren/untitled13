@@ -6,11 +6,11 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, WHITE, BLUE);
     display: flex;
     justify-content: center; /* center horizontally */
     align-items: flex-start; /* align to top */
     font-size: 50px;
+    background: #000814;
 }
 
 .container {
@@ -62,4 +62,207 @@ html, body {
 p5{
     font-size: 10px;
 }
+/* ===== Picture Animations ===== */
+.animated-pic {
+    display: inline-block;
+    border-radius: 12px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    animation: fadeInScale 1s ease forwards;
+}
+
+/* Hover zoom */
+.animated-pic:hover {
+    transform: scale(1.08) rotate(2deg);
+    filter: brightness(1.15);
+}
+
+/* Entrance animation */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.85);
+        filter: blur(4px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+/* Optional floating effect */
+.animated-pic.float {
+    animation: floaty 6s ease-in-out infinite;
+}
+
+@keyframes floaty {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+/* GLOBAL BACKGROUND + TEXT */
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top, #0a1a2f, #000814);
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #d9ecff;
+    overflow-x: hidden;
+}
+
+/* TITLE */
+.title {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 40px;
+    letter-spacing: 4px;
+}
+
+.frosty-glow {
+    color: #b8dfff;
+    text-shadow: 0 0 15px #7cc7ff, 0 0 30px #4aa8ff;
+    animation: pulseGlow 3s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0% { text-shadow: 0 0 10px #7cc7ff; }
+    50% { text-shadow: 0 0 25px #4aa8ff; }
+    100% { text-shadow: 0 0 10px #7cc7ff; }
+}
+
+/* IMAGE ROW */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.image-item img {
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform .3s, filter .3s;
+}
+
+.image-item img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px #6ecbff);
+}
+
+/* FADE IN */
+.fade-in {
+    animation: fadeIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* BOTTOM LEFT BOX */
+.bottom-left {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    text-align: center;
+}
+
+.frost-box {
+    background: rgba(0, 40, 70, 0.45);
+    padding: 12px;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(120, 180, 255, 0.4);
+}
+
+/* SMALL ICONS */
+.small-icon {
+    width: 70px;
+    margin-top: 8px;
+    transition: transform .3s;
+}
+
+.small-icon:hover {
+    transform: scale(1.15);
+}
+
+/* CHARACTER ANIMATIONS */
+
+/* Quincy — blue aura pulse */
+.quincy-pic {
+    animation: quincyGlow 3s infinite ease-in-out;
+}
+
+@keyframes quincyGlow {
+    0% { filter: drop-shadow(0 0 5px #6ecbff); }
+    50% { filter: drop-shadow(0 0 20px #a7e4ff); }
+    100% { filter: drop-shadow(0 0 5px #6ecbff); }
+}
+
+/* Hollow — shake + cold mist */
+.hollow-pic {
+    animation: hollowShake 2.5s infinite ease-in-out;
+}
+
+@keyframes hollowShake {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-3px) rotate(1deg); }
+    100% { transform: translateX(0); }
+}
+
+/* Soul Reaper — floating */
+.soulreaper-pic {
+    animation: soulFloat 4s infinite ease-in-out;
+}
+
+@keyframes soulFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Frosty icon for question mark */
+.frosty-icon {
+    width: 100px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px #7cc7ff);
+    transition: transform .3s;
+}
+
+.frosty-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Hint text */
+.hint-text {
+    font-size: 12px;
+    color: #b8dfff;
+    margin-top: 5px;
+}
+
+/* Spin animation */
+@keyframes spinWheel {
+    0% { transform: rotate(0deg) scale(1); }
+    30% { transform: rotate(180deg) scale(1.1); }
+    60% { transform: rotate(360deg) scale(0.9); }
+    100% { transform: rotate(720deg) scale(1); }
+}
+
+/* Flash burst */
+@keyframes flashBurst {
+    0% { opacity: 0; filter: brightness(1); }
+    50% { opacity: 1; filter: brightness(3); }
+    100% { opacity: 0; filter: brightness(1); }
+}
+
+.spin-anim {
+    animation: spinWheel 0.6s ease-out;
+}
+
+.flash-anim {
+    animation: flashBurst 0.4s ease-out;
+}
+
 
