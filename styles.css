@@ -30,7 +30,8 @@ body {
     animation: fadeDown 1s ease-out;
 }
 
-.navbar a, #modeBtn {
+.navbar a,
+#modeBtn {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -38,7 +39,8 @@ body {
     transition: 0.3s;
 }
 
-.navbar a:hover, #modeBtn:hover {
+.navbar a:hover,
+#modeBtn:hover {
     color: #ff4d4d;
     transform: scale(1.1);
 }
@@ -57,6 +59,12 @@ body {
     animation: glow 2s infinite alternate;
 }
 
+.hero p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
 /* SECTIONS */
 .section {
     padding: 50px 20px;
@@ -71,6 +79,12 @@ body {
     text-shadow: 0 0 15px #ff8080;
 }
 
+/* CARD LINK (makes whole card clickable) */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* CARDS */
 .card {
     background: #111;
@@ -80,6 +94,13 @@ body {
     margin: 0 auto;
     box-shadow: 0 0 20px rgba(255, 77, 77, 0.3);
     animation: popIn 0.8s ease-out;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(255, 77, 77, 0.7);
 }
 
 /* TICKET ANIMATIONS */
