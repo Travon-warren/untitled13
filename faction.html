@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Choose Your Faction — TYPE SOUL</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <a href="indexo.html">Home</a>
+  <a href="quincy.html">Quincy</a>
+  <a href="hollow.html">Hollow</a>
+  <a href="soul reaper.html">Soul Reaper</a>
+  <a href="faction.html">Choose Your Faction</a>
+  <button id="modeBtn">Toggle Mode</button>
+</nav>
+
+<header class="hero">
+  <h1>CHOOSE YOUR FACTION</h1>
+  <p>Click the button and let fate decide your destiny.</p>
+</header>
+
+<section class="section">
+  <div class="card">
+    <img src="iii.jpg" class="ticket" id="factionImage">
+    <p id="factionText">Press the button to begin.</p>
+  </div>
+
+  <button id="spinBtn" class="spin-btn">Choose Your Faction</button>
+</section>
+
+<footer>
+  <p>© 2026 Travon Warren — TYPE SOUL Project</p>
+</footer>
+
+<script>
+  const spinBtn = document.getElementById("spinBtn");
+  const factionImage = document.getElementById("factionImage");
+  const factionText = document.getElementById("factionText");
+
+  const factions = [
+    { name: "Quincy", img: "download.png", page: "quincy.html" },
+    { name: "Hollow", img: "images.png", page: "hollow.html" },
+    { name: "Soul Reaper", img: "iii.jpg", page: "soul reaper.html" }
+  ];
+
+  spinBtn.addEventListener("click", () => {
+    factionText.textContent = "Choosing...";
+    factionImage.style.animation = "float 0.3s infinite";
+
+    setTimeout(() => {
+      const chosen = factions[Math.floor(Math.random() * factions.length)];
+
+      factionImage.src = chosen.img;
+      factionText.textContent = "You are a " + chosen.name + "!";
+
+      factionImage.style.animation = "popIn 0.5s ease-out";
+
+      setTimeout(() => {
+        window.location.href = chosen.page;
+      }, 1500);
+
+    }, 1000);
+  });
+</script>
+
+</body>
+</html>
