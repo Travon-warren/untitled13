@@ -2,69 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TYPE SOUL</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>TYPE SOUL — Final Project</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<div class="container">
-    <h1 class="title frosty-glow">TYPE SOUL</h1>
+<nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#quincy">Quincy</a>
+    <a href="#hollow">Hollow</a>
+    <a href="#soulreaper">Soul Reaper</a>
+    <button id="modeBtn">Toggle Mode</button>
+</nav>
 
-    <div class="image-row">
-        <div class="image-item fade-in">
-            <a href="soul reaper.html">
-                <img src="iii.jpg" alt="Soul Reaper" class="animated-pic soulreaper-pic">
-            </a>
-            <p>soul reaper</p>
-        </div>
+<header id="home" class="hero">
+    <h1>TYPE SOUL UNIVERSE</h1>
+    <p>Explore the realms of Quincy, Hollows, and Soul Reapers.</p>
+</header>
 
-        <div class="image-item fade-in">
-            <a href="hollow.html">
-                <img src="images.png" alt="Hollow" class="animated-pic hollow-pic">
-            </a>
-            <p>hollow</p>
-        </div>
-
-        <div class="image-item fade-in">
-            <a href="quincy.html">
-                <img src="download.png" alt="Quincy" class="animated-pic quincy-pic">
-            </a>
-            <p>quincy</p>
-        </div>
+<section id="quincy" class="section">
+    <h2>QUINCY</h2>
+    <div class="card">
+        <img src="download.png" class="ticket">
+        <p>Masters of spiritual manipulation and ranged combat.</p>
     </div>
-</div>
+</section>
 
-<!-- Bottom-left corner -->
-<div class="bottom-left frost-box">
-    <a href="contact.html">
-        <img src="download.jpg" alt="Contact" class="frosty-icon">
-        <p class="hint-text">dont know what type soul is? Click the question mark!</p>
-    </a>
+<section id="hollow" class="section">
+    <h2>HOLLOW</h2>
+    <div class="card">
+        <img src="images.png" class="ticket">
+        <p>Corrupted spirits with monstrous power.</p>
+    </div>
+</section>
 
-    <a href="quincy.html">
-        <img src="download.png" alt="Quincy" class="animated-pic quincy-pic small-icon">
-    </a>
+<section id="soulreaper" class="section">
+    <h2>SOUL REAPER</h2>
+    <div class="card">
+        <img src="iii.jpg" class="ticket">
+        <p>Protectors of balance between worlds.</p>
+    </div>
+</section>
 
-    <a href="hollow.html">
-        <img src="images.png" alt="Hollow" class="animated-pic hollow-pic small-icon">
-    </a>
+<footer>
+    <p>© 2026 Travon Warren — TYPE SOUL Project</p>
+</footer>
 
-    <a href="soul reaper.html">
-        <img src="iii.jpg" alt="Soul Reaper" class="animated-pic soulreaper-pic small-icon">
-    </a>
-</div>
-
-<!-- Faction box OUTSIDE bottom-left -->
-<div class="faction-box">
-    <h2 class="faction-title">Choose Your Faction</h2>
-    <button id="spinButton" class="spin-btn">Choose Your Faction</button>
-    <div id="resultArea" class="result-area"></div>
-</div>
-
-<!-- Script MUST be at the bottom -->
-<script src="script.js"></script>
+<script>
+    const btn = document.getElementById("modeBtn");
+    btn.addEventListener("click", () => {
+        document.body.classList.toggle("light");
+    });
+</script>
 
 </body>
 </html>
-
