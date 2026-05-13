@@ -21,7 +21,6 @@ const resultArea = document.getElementById("resultArea");
 
 spinButton.addEventListener("click", () => {
 
-    // Add spin animation
     resultArea.classList.remove("spin-anim");
     void resultArea.offsetWidth; // reset animation
     resultArea.classList.add("spin-anim");
@@ -29,7 +28,6 @@ spinButton.addEventListener("click", () => {
     // Random faction
     const pick = factions[Math.floor(Math.random() * factions.length)];
 
-    // Delay reveal until spin finishes
     setTimeout(() => {
         resultArea.innerHTML = `
             <div class="flash-anim">
@@ -41,5 +39,5 @@ spinButton.addEventListener("click", () => {
                 </p>
             </div>
         `;
-    }, 600); // matches spinWheel duration
+    }, 600);
 });
